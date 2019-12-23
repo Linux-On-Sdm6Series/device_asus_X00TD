@@ -1,0 +1,28 @@
+# Baseband
+/(vendor|system/vendor)/bin/fix_baseband.sh                                                             u:object_r:fix_baseband_exec:s0
+
+# Goodix Fingerprint
+/dev/goodix_fp                                                          u:object_r:fingerprintd_device:s0
+
+# Keylayout
+/(vendor|system/vendor)/usr/keylayout(/.*)?                             u:object_r:keylayout_file:s0
+
+# Sensors
+/sys/devices/virtual/input/input[0-9]+/stk3x1x-proximity(/.*)?          u:object_r:sysfs_sensors:s0
+/sys/devices/virtual/input/input[0-9]+/stk3x1x-light(/.*)?              u:object_r:sysfs_sensors:s0
+
+# cdfinger Fingerprint
+/dev/fpsdev0                                                            u:object_r:cdfinger_device:s0
+/data/system/cdfinger(/.*)?                                             u:object_r:cdfinger_data_file:s0
+
+# blutmac script
+/(vendor|system/vendor)/bin/init\.btmac\.sh                             u:object_r:init_blutmac_exec:s0
+/(vendor|system/vendor)/bin/nvram_btwifi                                u:object_r:nvram_btwifi_exec:s0
+
+# Light
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.asus_X00T                         u:object_r:hal_light_default_exec:s0
+/sys/class/leds(/.*)?                                                                                   u:object_r:sysfs_leds:s0
+
+# DRM
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey				u:object_r:hal_drm_clearkey_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine				u:object_r:hal_drm_widevine_exec:s0

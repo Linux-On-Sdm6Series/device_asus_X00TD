@@ -535,6 +535,12 @@
         <path name="low-latency-playback bt-sco" />
     </path>
 
+    <!-- lct add for whatsapp call ring -->    
+    <path name="low-latency-playback speaker-and-bt-sco-wb"> 
+	 <path name="low-latency-playback bt-sco-wb" /> 
+	 <path name="low-latency-playback speaker" /> 
+    </path> 
+
     <!-- Huaqin add for TT bug id 1165336 by xudayi at 2018/03/15 start -->
     <path name="low-latency-playback speaker-and-hdmi">
         <path name="low-latency-playback hdmi" />
@@ -2042,6 +2048,26 @@
         <path name="headphones" />
     </path>
 
+    <path name="headphones-ce">
+        <path name="headphones" />
+        <ctl name="RX1 Digital Volume" value="72" />
+        <ctl name="RX2 Digital Volume" value="72" />
+    </path>
+
+    <path name="headphones-no-ce">
+        <path name="headphones" />
+        <ctl name="RX1 Digital Volume" value="81" />
+        <ctl name="RX2 Digital Volume" value="81" />
+    </path>
+
+    <path name="headphones-karaoke">
+        <path name="headphones" />
+	<ctl name="RX1 MIX2 INP1" value="IIR1" /> 
+	<ctl name="RX2 MIX2 INP1" value="IIR1" /> 
+	<ctl name="IIR1 INP1 Volume" value="80" /> 
+	<ctl name="IIR1 INP2 Volume" value="80" /> 
+    </path>
+
     <path name="true-native-mode">
     </path>
 
@@ -2105,6 +2131,16 @@
     <path name="speaker-and-headphones">
         <path name="headphones" />
         <path name="speaker" />
+    </path>
+
+    <path name="speaker-and-headphones-ce">
+        <path name="headphones-ce" />
+        <path name="speaker" />
+    </path>
+    
+    <path name="speaker-and-headphones-no-ce">
+    <path name="headphones-no-ce" />
+    <path name="speaker" />
     </path>
 
     <path name="speaker-and-line">
@@ -2509,11 +2545,6 @@
     <!-- Huaqin add for TT bug id 1235288(ZB601KL)  by zhaojunhai1 at 2018/09/29 start -->
     <path name="low-latency-playback speaker-and-bt-sco">
         <path name="low-latency-playback bt-sco" />
-        <path name="low-latency-playback speaker" />
-    </path>
-
-    <path name="low-latency-playback speaker-and-bt-sco-wb">
-        <path name="low-latency-playback bt-sco-wb" />
         <path name="low-latency-playback speaker" />
     </path>
     <!-- Huaqin add for TT bug id 1235288(ZB601KL) by zhaojunhai1 at 2018/09/29 end -->

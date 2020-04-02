@@ -549,7 +549,8 @@ PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
 # init scripts
 PRODUCT_PACKAGES += \
-    init.halium.rc
+    init.halium.rc \
+    init.disabled.rc
 
 PRODUCT_PACKAGES += \
     sensorservice

@@ -546,6 +546,10 @@ PRODUCT_COPY_FILES += \
 # Enable dynamic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
+# init scripts
+PRODUCT_PACKAGES += \
+    init.halium.rc
+
 PRODUCT_PACKAGES += \
     sensorservice
 

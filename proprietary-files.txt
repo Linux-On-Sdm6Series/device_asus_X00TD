@@ -36,8 +36,8 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
 # Alarm
--framework/vendor.qti.hardware.alarm-V1.0-java.jar
--vendor/app/PowerOffAlarm/PowerOffAlarm.apk|881e8db50782b0c72aa9ca51731f30156c097f78
+# -framework/vendor.qti.hardware.alarm-V1.0-java.jar
+# -vendor/app/PowerOffAlarm/PowerOffAlarm.apk|881e8db50782b0c72aa9ca51731f30156c097f78
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -704,9 +704,9 @@ vendor/bin/hvdcp_opti
 # CNE
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
-framework/cneapiclient.jar
-framework/com.quicinc.cne.jar
--priv-app/CNEService/CNEService.apk
+# framework/cneapiclient.jar
+# framework/com.quicinc.cne.jar
+# -priv-app/CNEService/CNEService.apk
 vendor/bin/cnd
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
@@ -759,7 +759,7 @@ vendor/lib64/vendor.qti.latency@2.0.so
 
 # Display
 etc/permissions/com.qti.snapdragon.sdk.display.xml
--framework/com.qti.snapdragon.sdk.display.jar
+# -framework/com.qti.snapdragon.sdk.display.jar
 lib64/libsdm-disp-apis.so
 lib64/vendor.display.color@1.0.so
 lib64/vendor.display.color@1.1.so
@@ -788,15 +788,15 @@ etc/dpm/dpm.conf
 etc/init/dpmd.rc
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar
-framework/dpmapi.jar
-framework/tcmclient.jar
+# framework/com.qti.dpmframework.jar
+# framework/dpmapi.jar
+# framework/tcmclient.jar
 lib64/com.qualcomm.qti.dpm.api@1.0.so
 lib64/libdpmctmgr.so
 lib64/libdpmfdmgr.so
 lib64/libdpmframework.so
 lib64/libdpmtcm.so
--priv-app/dpmserviceapp/dpmserviceapp.apk
+# -priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
@@ -856,7 +856,7 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
 # Factory
--framework/vendor.qti.hardware.factory-V1.0-java.jar
+# -framework/vendor.qti.hardware.factory-V1.0-java.jar
 lib/vendor.qti.hardware.factory@1.0.so
 lib64/vendor.qti.hardware.factory@1.0.so
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
@@ -866,8 +866,8 @@ vendor/lib/hw/vendor.qti.hardware.factory@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.factory@1.0-impl.so
 
 # Fingerprint sensor
-framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
--vendor/app/QFingerprintService/QFingerprintService.apk
+# framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
+# -vendor/app/QFingerprintService/QFingerprintService.apk
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/qfp-daemon
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
@@ -1172,17 +1172,17 @@ vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Radio
--app/CallFeaturesSetting/CallFeaturesSetting.apk
--app/QtiTelephonyService/QtiTelephonyService.apk
--app/datastatusnotification/datastatusnotification.apk
--app/embms/embms.apk
+# -app/CallFeaturesSetting/CallFeaturesSetting.apk
+# -app/QtiTelephonyService/QtiTelephonyService.apk
+# -app/datastatusnotification/datastatusnotification.apk
+# -app/embms/embms.apk
 etc/permissions/embms.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
-framework/QtiTelephonyServicelibrary.jar
-framework/embmslibrary.jar
--framework/qcrilhook.jar
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+# framework/QtiTelephonyServicelibrary.jar
+# framework/embmslibrary.jar
+# -framework/qcrilhook.jar
+# -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/hw/qcrild
 vendor/bin/netmgrd
@@ -1228,8 +1228,8 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/radio/qcril_database/qcril.db
 
 # Radio (IMS)
--app/imssettings/imssettings.apk
--app/uceShimService/uceShimService.apk
+# -app/imssettings/imssettings.apk
+# -app/uceShimService/uceShimService.apk
 lib64/com.qualcomm.qti.imscmservice@1.0.so
 lib64/com.qualcomm.qti.imscmservice@2.0.so
 lib64/com.qualcomm.qti.imscmservice@2.1.so
@@ -1243,7 +1243,7 @@ lib64/libimscamera_jni.so
 lib64/libimsmedia_jni.so
 lib64/vendor.qti.ims.callinfo@1.0.so
 lib64/vendor.qti.imsrtpservice@1.0.so
--priv-app/ims/ims.apk
+# -priv-app/ims/ims.apk
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -1291,7 +1291,7 @@ vendor/lib64/sensors.native.so
 vendor/lib64/sensors.ssc.so
 
 # Sensors calibration
--framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
+# -framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 vendor/etc/calmodule.cfg
 vendor/lib/libcalmodule_common.so
 vendor/lib/sensor_calibrate.so
@@ -1312,7 +1312,7 @@ vendor/firmware/cppf.b07
 vendor/firmware/cppf.mdt
 
 # Soter
-framework/vendor.qti.hardware.soter-V1.0-java.jar
+# framework/vendor.qti.hardware.soter-V1.0-java.jar
 lib64/vendor.qti.hardware.soter@1.0.so
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
@@ -1320,7 +1320,7 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Telephony - from jasmine-user-9-PKQ1.180904.001-V10.0.1.0.PDIMIFJ-release-keys
-framework/qti-telephony-common.jar|2ff99f59424637220556eb036c04896f82ddc3b5
+# framework/qti-telephony-common.jar|2ff99f59424637220556eb036c04896f82ddc3b5
 
 # Thermal
 vendor/bin/thermal-engine
@@ -1329,7 +1329,7 @@ vendor/bin/thermal-engine
 vendor/lib64/libthermalioctl.so
 
 # Time services
--vendor/app/TimeService/TimeService.apk
+# -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
 
@@ -1358,7 +1358,7 @@ bin/wfdservice
 etc/init/wfdservice.rc
 etc/wfdconfig.xml
 etc/wfdconfigsink.xml
--framework/WfdCommon.jar
+# -framework/WfdCommon.jar
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/extractors/libmmparser.so
 lib/libFileMux.so
@@ -1391,7 +1391,7 @@ lib64/libmmparser_lite.so
 lib64/libwfdclient.so
 lib64/libwfdnative.so
 lib64/libwfds.so
--priv-app/WfdService/WfdService.apk
+# -priv-app/WfdService/WfdService.apk
 vendor/bin/wifidisplayhalservice
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so

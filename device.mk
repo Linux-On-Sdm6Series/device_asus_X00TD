@@ -69,12 +69,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library
+# PRODUCT_PACKAGES += \
+#     AntHalService \
+#     com.dsi.ant.antradio_library
 
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
+# PRODUCT_COPY_FILES += \
+#     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -127,8 +127,8 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    libxml2 \
-    Snap
+    libxml2
+#     Snap
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -136,8 +136,8 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne
 
 # Configstore
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-service
+# PRODUCT_PACKAGES += \
+#     android.hardware.configstore@1.0-service
 
 # Display
 PRODUCT_PACKAGES += \
@@ -221,8 +221,8 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0-java
 
 # IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common
+# PRODUCT_PACKAGES += \
+#     ims-ext-common
 
 # IPv6
 PRODUCT_PACKAGES += \
@@ -251,8 +251,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service
 
 # LiveDisplay native
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.livedisplay@2.0-service-sdm
 
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
@@ -303,7 +303,7 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
     SecureElement \
-    Tag \
+    Tag
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -326,8 +326,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+# PRODUCT_ENFORCE_RRO_TARGETS := \
+#     framework-res
 
 # Power
 PRODUCT_PACKAGES += \
@@ -383,8 +383,8 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
-PRODUCT_BOOT_JARS += \
-    qcrilhook
+# PRODUCT_BOOT_JARS += \
+#     qcrilhook
 
 # QCOM
 PRODUCT_COPY_FILES += \
@@ -412,11 +412,11 @@ PRODUCT_COPY_FILES += \
 -include $(LOCAL_PATH)/system_prop.mk
 
 # Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
+# PRODUCT_PACKAGES += \
+#     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+# PRODUCT_BOOT_JARS += \
+#     telephony-ext
 
 # Tetheroffload
 PRODUCT_PACKAGES += \
@@ -447,12 +447,12 @@ PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.X00TD
 
 # Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
-	android.hardware.usb@1.0-service.basic
+    android.hardware.usb@1.0-service.basic
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
@@ -476,18 +476,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+# PRODUCT_BOOT_JARS += \
+#     WfdCommon
 
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    hostapd \
-    hostapd_cli \
+#     hostapd \
+#     hostapd_cli \
     libwifi-hal-qcom \
     wcnss_service \
     wificond \
-    wpa_supplicant \
+#     wpa_supplicant \
     wpa_supplicant.conf \
     wifi-mac-generator
 
@@ -496,5 +496,46 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+#### Ubuntu Touch ####
+
+# Misc
+PRODUCT_PACKAGES += \
+    libandroid \
+    libandroid_runtime \
+    libdrm \
+    vendor.display.config@1.7 \
+    libion
+
+# Media
+PRODUCT_PACKAGES += \
+    libmedia_omx \
+    drmserver \
+    mediadrmserver \
+    mediaextractor
+
+# Hybris compat libs
+PRODUCT_PACKAGES += \
+    libmedia_compat_layer \
+    libsf_compat_layer \
+    libui_compat_layer
+
+# Droidmedia
+PRODUCT_PACKAGES += \
+    libdroidmedia \
+    minimediaservice \
+    minisfservice \
+    miniafservice
+
+# Ubuntu
+PRODUCT_PACKAGES += \
+    libbiometry_fp_api \
+    libubuntu_application_api
+
+# Enable dynamic partition size
+PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
+
+PRODUCT_PACKAGES += \
+    sensorservice
 
 $(call inherit-product, vendor/asus/X00TD/X00TD-vendor.mk)

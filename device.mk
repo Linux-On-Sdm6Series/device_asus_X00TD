@@ -378,6 +378,11 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
     android.hardware.radio.config@1.0 \
     android.hardware.secure_element@1.0 \
+    android.hardware.radio@1.0-impl \
+    android.hardware.radio@1.0-service \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio.deprecated@1.0-impl \
+    android.hardware.radio.deprecated@1.0-service \
     rild \
     librmnetctl \
     libxml2 \
@@ -464,7 +469,8 @@ PRODUCT_PACKAGES += \
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \
-    vndk-sp
+    vndk-sp \
+    vndk-core
 
 # VR
 PRODUCT_PACKAGES += \

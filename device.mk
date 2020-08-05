@@ -538,6 +538,11 @@ PRODUCT_PACKAGES += \
     libbiometry_fp_api \
     libubuntu_application_api
 
+# Halium/UBports
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/halium-overlay/lib/udev/rules.d/70-X00TD.rules:system/halium/lib/udev/rules.d/70-android.rules \
+    $(LOCAL_PATH)/halium-overlay/etc/ubuntu-touch-session.d/android.conf:system/halium/etc/ubuntu-touch-session.d/android.conf
+
 # Enable dynamic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 

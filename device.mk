@@ -544,7 +544,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/halium-overlay/etc/ubuntu-touch-session.d/android.conf:system/halium/etc/ubuntu-touch-session.d/android.conf \
     $(LOCAL_PATH)/halium-overlay/usr/share/repowerd/device-configs/config-default.xml:$(TARGET_COPY_OUT_SYSTEM)/halium/usr/share/repowerd/device-configs/config-default.xml \
     $(LOCAL_PATH)/halium-overlay/etc/init/ssh.override:$(TARGET_COPY_OUT_SYSTEM)/halium/etc/init/ssh.override \
-    $(LOCAL_PATH)/halium-overlay/etc/init/usb-tethering.conf:$(TARGET_COPY_OUT_SYSTEM)/halium/etc/init/usb-tethering.conf
+    $(LOCAL_PATH)/halium-overlay/etc/init/usb-tethering.conf:$(TARGET_COPY_OUT_SYSTEM)/halium/etc/init/usb-tethering.conf \
+    $(LOCAL_PATH)/halium-overlay/etc/ofono/main.conf:$(TARGET_COPY_OUT_SYSTEM)/halium/etc/ofono/main.conf \
+    $(LOCAL_PATH)/halium-overlay/etc/ofono/ril_subscription.conf:$(TARGET_COPY_OUT_SYSTEM)/halium/etc/ofono/ril_subscription.conf
 
 # Enable dynamic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true

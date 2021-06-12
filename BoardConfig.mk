@@ -239,7 +239,7 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Treble
 BOARD_VNDK_VERSION := current
-BOARD_VNDK_RUNTIME_DISABLE := true
+# BOARD_VNDK_RUNTIME_DISABLE := true
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true

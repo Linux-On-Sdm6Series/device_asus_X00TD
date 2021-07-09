@@ -400,7 +400,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aosip
+    $(LOCAL_PATH)/overlay-lineage
 
 # Perf configuration
 PRODUCT_COPY_FILES += \
@@ -609,4 +609,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
     $(LOCAL_PATH)/configs/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf 
 
-$(call inherit-product, vendor/asus/X00T/X00T-vendor.mk)
+$(call inherit-product, vendor/asus/X00TD/X00TD-vendor.mk)

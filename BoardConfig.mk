@@ -22,7 +22,7 @@
 # definition file).
 #
 
-DEVICE_PATH := device/asus/X00T
+DEVICE_PATH := device/asus/X00TD
 
 BOARD_VENDOR := asus
 
@@ -67,7 +67,7 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
-TARGET_KERNEL_CONFIG := X00T_defconfig
+TARGET_KERNEL_CONFIG := X00TD_defconfig
 
 # ANT+
 #TARGET_USES_PREBUILT_ANT := true
@@ -310,4 +310,4 @@ WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # inherit from the proprietary version
--include vendor/asus/X00T/BoardConfigVendor.mk
+-include vendor/asus/X00TD/BoardConfigVendor.mk
